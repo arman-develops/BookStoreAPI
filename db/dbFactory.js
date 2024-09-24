@@ -1,7 +1,7 @@
 import MongoDB from "./mongoDB.js";
 import { connectGraphQL } from "./graphQL.js"; 
 import { connectMySQL } from "./mySQL.js";
-import { connectPostgreSQL } from "./postgreSQL.js";
+import Postgres from "./postgreSQL.js";
 
 async function connectDB(dbType, collection) {
     switch(dbType) {
@@ -12,8 +12,9 @@ async function connectDB(dbType, collection) {
             return connectGraphQL(url);
         case 'mySQL':
             return connectMySQL(url);
-        case 'postgreSQL':
-            return connectPostgreSQL(url);
+        case 'postgres':
+            // Postgres.connect()
+            return new Postgres(collection);
         default:
             console.log("Unsupported database, switch now!!");
             process.exit();

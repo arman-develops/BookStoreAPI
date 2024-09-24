@@ -2,8 +2,9 @@
 import { v4 as uuidv4 } from "uuid";
 import connectDB from "../db/dbFactory.js";
 import authorModel from "../models/authorModel.js";
-import bookModel from "../models/bookModel.js";
-const authorController = await connectDB('mongodb', authorModel);
+// const authorController = await connectDB('mongodb', authorModel);
+const authorController = await connectDB('postgres', 'authors');
+
 
 async function createAuthor(req, res) {
     const {name} = req.body;

@@ -4,7 +4,8 @@ import dayjs from "dayjs";
 import connectDB from "../db/dbFactory.js";
 import bookModel from "../models/bookModel.js";
 const now = dayjs();
-const bookController = await connectDB('mongodb', bookModel);
+// const bookController = await connectDB('mongodb', bookModel);
+const authorController = await connectDB('postgres', 'authors');
 
 async function createBook(req, res) {
     const {
