@@ -9,7 +9,9 @@ BookStoreAPI is a Node.js backend service that allows users to perform CRUD (Cre
 - **Delete Books**: Remove books from the catalog.
 - **Add Authors**: Manage authors' information including names and ID associations.
 - **Delete Authors**: Remove author information from the database.
+- **Database Abstraction Layer**: Developed a single interface for my database controllers but each database implementation is different.
 - **MongoDB Integration**: Uses MongoDB Atlas for storing books and authors.
+- **PostgreSQL Integration**: Uses PostgreSQL as an optional database
 
 ## Table of Contents
 - [Installation](#installation)
