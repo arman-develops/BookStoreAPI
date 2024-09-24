@@ -58,3 +58,5 @@ At tool like [Postman](https://www.postman.com/ "Postman") or `curl` comes in ha
 >4.**Mongoose**: MongoDB object modelling tool for schema and query management.
 
 >5.**MongoDB Atlas**: Cloud-hosted MongoDB database.
+
+>6.**PostgreSQL Database**: Locally and cloud hosted installations.
