@@ -12,7 +12,6 @@ const bookSchema = mongoose.Schema({
     authorID: {
         type: String,
         required: true,
-        unique: true,
         ref: 'Author'
 
     },
