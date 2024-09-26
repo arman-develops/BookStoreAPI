@@ -1,6 +1,6 @@
 import MongoDB from "./mongoDB.js";
 import { connectGraphQL } from "./graphQL.js"; 
-import { connectMySQL } from "./mySQL.js";
+import Mysql from "./mySQL.js";
 import Postgres from "./postgreSQL.js";
 
 async function connectDB(dbType, collection) {
@@ -10,8 +10,8 @@ async function connectDB(dbType, collection) {
             return new MongoDB(collection);
         case 'graphQL':
             return connectGraphQL(url);
-        case 'mySQL':
-            return connectMySQL(url);
+        case 'mysql':
+            return new Mysql(collection);
         case 'postgres':
             // Postgres.connect()
             return new Postgres(collection);

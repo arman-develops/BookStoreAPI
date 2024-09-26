@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 import connectDB from "../db/dbFactory.js";
 import authorModel from "../models/authorModel.js";
 // const authorController = await connectDB('mongodb', authorModel);
-const authorController = await connectDB('postgres', 'authors');
-
+// const authorController = await connectDB('postgres', 'authors');
+const authorController = await connectDB('mysql', 'authors');
 
 async function createAuthor(req, res) {
     const {name} = req.body;
@@ -14,7 +14,7 @@ async function createAuthor(req, res) {
     };
 
     try {
-        const author = await authorController.insert(authorData);
+        await authorController.insert(authorData);
         res.status(200).json({message: 'Sucessfully saved the document'});
     }catch(err) {
         res.status(500).json({message: `An error occured while saving document. ${err}`})
