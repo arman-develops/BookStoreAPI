@@ -12,6 +12,7 @@ BookStoreAPI is a Node.js backend service that allows users to perform CRUD (Cre
 - **Database Abstraction Layer**: Developed a single interface for my database controllers but each database implementation is different.
 - **MongoDB Integration**: Uses MongoDB Atlas for storing books and authors.
 - **PostgreSQL Integration**: Uses PostgreSQL as an optional database
+- **GraphQL API Integration**: Coming soon.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -60,3 +61,5 @@ At tool like [Postman](https://www.postman.com/ "Postman") or `curl` comes in ha
 >5.**MongoDB Atlas**: Cloud-hosted MongoDB database.
 
 >6.**PostgreSQL Database**: Locally and cloud hosted installations.
+
+>7.**GraphQL API**: Coming soon.
